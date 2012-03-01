@@ -1844,5 +1844,14 @@ namespace TESVSnip
             var search = CreateSearchWindow();
             search.ReferenceSearch(formid);
         }
+
+        private void uTF8ModeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.UseUTF8 = uTF8ModeToolStripMenuItem.Checked;
+            if (MessageBox.Show(Resources.RestartText, Resources.InfoText, MessageBoxButtons.YesNoCancel) == DialogResult.Yes)
+            {
+                Application.Restart();
+            }
+        }
     }
 }
