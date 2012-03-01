@@ -480,17 +480,11 @@
   <data name="editStringsToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Edit Strings...</value>
   </data>
-  <data name="saveStringsFilesToolStripMenuItem.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="saveStringsFilesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>264, 22</value>
   </data>
   <data name="saveStringsFilesToolStripMenuItem.Text" xml:space="preserve">
     <value>Enable Saving Strings Files</value>
-  </data>
-  <data name="saveStringsToolStripMenuItem.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="saveStringsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>264, 22</value>
