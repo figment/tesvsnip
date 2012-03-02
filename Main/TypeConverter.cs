@@ -318,7 +318,7 @@ namespace TESVSnip
             {
                 var c = (char) data.Array[data.Offset + i];
                 //if (c == 0) return (i > 0);
-                isAscii = !Char.IsControl(c);
+                isAscii = !Char.IsControl(c) || c == '\r' || c == '\n';//Fix for multiline string.
                 isMultibyte = (c & 0x80) != 0;//Only tested for some CJK ,Not confirmed for other charset
             }
             return ((isMultibyte || isAscii) && data.Array[data.Count - 1] == 0);

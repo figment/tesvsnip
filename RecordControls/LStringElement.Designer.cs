@@ -55,6 +55,7 @@
             this.Error.SetIconPadding(this.txtString, ((int)(resources.GetObject("txtString.IconPadding"))));
             this.txtString.Name = "txtString";
             this.txtString.Validated += new System.EventHandler(this.txtString_Validated);
+            this.txtString.DoubleClick += new System.EventHandler(this.txtString_DoubleClick);
             // 
             // LStringElement
             // 
