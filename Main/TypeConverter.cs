@@ -313,13 +313,15 @@ namespace TESVSnip
         public static bool IsLikelyString(ArraySegment<byte> data)
         {
             bool isAscii = true;
+            bool isMultibyte = true;
             for (int i = 0; i < data.Count - 1 && isAscii; ++i)
             {
                 var c = (char) data.Array[data.Offset + i];
                 //if (c == 0) return (i > 0);
-                isAscii = !Char.IsControl(c);
+                isAscii = !Char.IsControl(c) || c == '\r' || c == '\n';//Fix for multiline string.
+                isMultibyte = (c & 0x80) != 0;//Only tested for some CJK ,Not confirmed for other charset
             }
-            return (isAscii && data.Array[data.Count - 1] == 0);
+            return ((isMultibyte || isAscii) && data.Array[data.Count - 1] == 0);
         }
 
         public static string GetZString(ArraySegment<byte> data)
@@ -371,13 +373,13 @@ namespace TESVSnip
         {
             int len = Encoding.CP1252.GetByteCount(str);
             var data = new byte[len + 1];
-            Encoding.CP1252.GetBytes(str, 0, len, data, 0);
+            Encoding.CP1252.GetBytes(str).CopyTo(data,0);
             data[len] = 0;
             return data;
         }
-
         /// <summary>
         /// Encode short byte length prefixed string
+        /// fix for UTF-8
         /// </summary>
         /// <param name="str"></param>
         /// <returns></returns>

@@ -73,6 +73,7 @@ namespace TESVSnip {
             this.searchAdvancedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hexModeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.uTF8ModeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.useNewSubrecordEditorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lookupFormidsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.useWindowsClipboardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -375,6 +376,7 @@ namespace TESVSnip {
             // 
             this.optionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.hexModeToolStripMenuItem,
+            this.uTF8ModeToolStripMenuItem,
             this.useNewSubrecordEditorToolStripMenuItem,
             this.lookupFormidsToolStripMenuItem,
             this.useWindowsClipboardToolStripMenuItem,
@@ -394,6 +396,15 @@ namespace TESVSnip {
             this.hexModeToolStripMenuItem.Name = "hexModeToolStripMenuItem";
             resources.ApplyResources(this.hexModeToolStripMenuItem, "hexModeToolStripMenuItem");
             this.hexModeToolStripMenuItem.Click += new System.EventHandler(this.hexModeToolStripMenuItem_Click);
+            // 
+            // uTF8ModeToolStripMenuItem
+            // 
+            this.uTF8ModeToolStripMenuItem.Checked = true;
+            this.uTF8ModeToolStripMenuItem.CheckOnClick = true;
+            this.uTF8ModeToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.uTF8ModeToolStripMenuItem.Name = "uTF8ModeToolStripMenuItem";
+            resources.ApplyResources(this.uTF8ModeToolStripMenuItem, "uTF8ModeToolStripMenuItem");
+            this.uTF8ModeToolStripMenuItem.Click += new System.EventHandler(this.uTF8ModeToolStripMenuItem_Click);
             // 
             // useNewSubrecordEditorToolStripMenuItem
             // 
@@ -1176,5 +1187,6 @@ namespace TESVSnip {
         private System.Windows.Forms.ToolStripMenuItem exportStringsToFileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem importStringsToFileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem internalizeStringReferencesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem uTF8ModeToolStripMenuItem;
     }
 }

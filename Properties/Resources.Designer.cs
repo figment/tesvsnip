@@ -568,6 +568,15 @@ namespace TESVSnip.Properties {
             }
         }
         
+        /// <summary>
+        ///   查找类似 To confirm the coding setting, restart Tesvsnip now? 的本地化字符串。
+        /// </summary>
+        internal static string RestartText {
+            get {
+                return ResourceManager.GetString("RestartText", resourceCulture);
+            }
+        }
+        
         internal static System.Drawing.Bitmap Revert {
             get {
                 object obj = ResourceManager.GetObject("Revert", resourceCulture);
